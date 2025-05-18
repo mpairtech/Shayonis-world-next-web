@@ -4,8 +4,6 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 
-/*background: #AF703226; background: #F5F2EC; */
-
 
 const StarIcon = ({
   color = "white",
@@ -65,9 +63,9 @@ const Hero = () => {
 
     <div>
 
-    <div className="hero-bg max-w-screen mx-auto md:p-12 relative">
+    <div className="hero-bg max-w-screen mx-auto md:p-12 relative overflow-hidden">
      
-<div className="absolute -top-30 -right-90 -translate-x-1/2 w-[500px] h-[500px] rounded-full border-[80px] border-[#AF703226] opacity-100 blur-2xl z-0" />
+<div className="absolute overflow-hidden -top-30 -right-90 -translate-x-1/2 w-[500px] h-[500px] rounded-full border-[80px] border-[#AF703226] opacity-100 blur-2xl z-0" />
 
 
       {/* Hero Content */}
@@ -129,7 +127,7 @@ const Hero = () => {
             className="rounded-[30px] object-cover  w-[230px] h-[230px] overflow-hidden"   />
         </div>
       </div>
-      
+
 
       {/* Autoscroll Text */}
       <div className={ className + "movingtext  overflow-auto mt-16 flex flex-row "}>

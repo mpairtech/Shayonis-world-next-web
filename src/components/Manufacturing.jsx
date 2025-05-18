@@ -110,7 +110,8 @@ export default function Manufacturing() {
 
        <div className="simple-carousel">
       <div  className="carousel-track-wrapper"  >
-        <div  className="carousel-track"  style={{ transform: `translateX(-${index * (100 + 2)}%)` }}  // Adjust for gap  // 
+        
+        <div  className="carousel-track" style={{ transform: `translateX(-${index * 100}%)` }}  // Adjust for gap  // 
         >
 
         {carouselItems.map((item) => (
@@ -120,12 +121,12 @@ export default function Manufacturing() {
               alt={item.title}
               width={800}
               height={400}
-              className="carousel-img"
+              className=" w-[800px] h-[400px] object-cover carousel-img "
             />
-            <div className="overlay">
-              <div className="carousel-info flex flex-row justify-between items-start gap-36">
-               <span className="pl-8 pt-16 w-full"> <p >{item.subtitle}</p>  </span> 
-               <span className="flex items-end pt-60">  <h3>{item.title}</h3> </span>
+            <div className="overlay ">
+              <div className="carousel-info flex flex-row justify-between items-start gap-44 px-12 ">
+               <span className=" pt-16 w-7/12 "> <p >{item.subtitle}</p>  </span> 
+               <span className="flex items-end pt-60 pl-16 w-3/12">  <h3>{item.title}</h3> </span>
                
               </div>
             </div>

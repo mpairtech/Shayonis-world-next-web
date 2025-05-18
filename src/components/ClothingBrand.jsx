@@ -1,10 +1,10 @@
-'use client';
-
+"use client"
 import React  from 'react';
 import { useEffect, useState } from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import Tag from './Tag';
 import AutoScroll from './AutoScroll';
+import AutoScrolling from './AutoScrolling';
 
 
 
@@ -17,9 +17,7 @@ const categories = [
 ];
 
 
-
 const ClothingBrand = () => {
-
   const [activeText, setActiveText] = useState(0);
 
   useEffect(() => {
@@ -47,7 +45,9 @@ const ClothingBrand = () => {
       </div>
       
        {/* Scrollable Info Box */}
-        <AutoScroll />
+       <div className=" h-24 w-5/12">
+        <AutoScrolling  />
+        </div> 
         
        </div> 
 

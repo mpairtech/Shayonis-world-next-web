@@ -3,6 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@import 'aos/dist/aos.css';
+
+
 :root {
   --custom-grey: #555B73;
   --primary-text: #5F657B;
@@ -86,6 +89,8 @@ html {
 
 .vision-bg{
   background: linear-gradient(180deg, #5F657B 0%, #5C6586 100%);  
+  overflow: hidden;
+  
 }
 
 @keyframes scroll-up {
@@ -188,10 +193,10 @@ html {
 }
 
 
-{/*for Carosal*/}
+{/*for Carousel*/}
 
 .simple-carousel {
-  padding: 4px; /* margin around the whole carousel */
+  padding: 2px; /* margin around the whole carousel */
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
@@ -204,7 +209,7 @@ html {
 .carousel-track {
   display: flex;
   transition: transform 2s ease-in-out;
-  gap: 10px; /* space between slides */
+  gap: 0px; /* space between slides */
 }
 
 .carousel-slide-card {
@@ -214,10 +219,10 @@ html {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   aspect-ratio: 16/9;
 
 }
+
 
 .carousel-img {
   width: 100%;
@@ -231,9 +236,8 @@ html {
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   display: flex;
-  
   color: white;
-  
+  border-radius: 20px;
 }
 
 .carousel-info h3 {

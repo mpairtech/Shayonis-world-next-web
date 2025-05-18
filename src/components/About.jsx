@@ -60,30 +60,30 @@ const About =() => {
 
 {/* mission vision */}
     <section>
-        <div className="mt-6 vision-bg max-w-screen mx-auto py-10 px-16 rounded-3xl flex flex-row items-start justify-between ">
+        <div className="mt-6 vision-bg  mx-auto py-10 px-16 rounded-3xl flex flex-row items-start justify-between  gap-16">
             {/*left text*/}
-            <div className="flex flex-col gap-16 justify-between">
+            <div className="flex flex-col gap-24 justify-between">
                 <h1 className="text-white text-[44px] font-bold">One Vision. <br /> Many Dimensions.</h1>
 
-                <p className=" text-lg font-normal text-white w-2/3">Shayonis World is more than a business — it's a collective vision brought to life through innovation, creativity, and purpose. With thriving ventures in fashion, agriculture, apparel, and home lifestyle, we strive to enhance the everyday experience of individuals and communities alike. Each brand under our name is guided by a shared philosophy: excellence, authenticity, and impact.</p>
+                <p className=" text-lg font-normal text-white ">Shayonis World is more than a business — it's a collective vision brought to life through innovation, creativity, and purpose. With thriving ventures in fashion, agriculture, apparel, and home lifestyle, we strive to enhance the everyday experience of individuals and communities alike. Each brand under our name is guided by a shared philosophy: excellence, authenticity, and impact.</p>
             </div>
 
             {/*right image*/}   
-            <div className=" gap-6 flex flex-row justify-center items-center">
+            <div className=" gap-8 flex flex-row justify-start items-start flex-shrink-0">
               
                 <Image
                     src="/image/vision-img2.png"
                     alt="Vision"
-                    width={100}
+                    width={280}
                  height={200}
-                    className="w-[300px] h-[150px] object-cover object-center rounded-[0_0_110px_110px]"
+                    className="w-[160px] h-[200px] object-cover object-right-top rounded-[0_0_110px_110px]"
                 />
                 <Image
                     src="/image/vision-img1.png"
                     alt="Vision"
-                    width={100}
+                    width={80}
                     height={200}
-                    className="w-[225px] h-[180px] object-cover object-right  rounded-[0_0_110px_110px]"     
+                    className="w-[160px] h-[300px] object-cover object-center-top  rounded-[0_0_110px_110px]"     
                     />
             </div>
 
