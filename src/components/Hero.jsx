@@ -61,15 +61,15 @@ const Hero = () => {
 
   return (
 
-    <div>
+    <div className="hero-bg   overflow-hidden">
 
-    <div className="hero-bg max-w-screen mx-auto md:p-12 relative overflow-hidden">
+    <div className=" max-w-screen mx-auto  relative pt-12 px-12">
      
 <div className="absolute overflow-hidden -top-30 -right-90 -translate-x-1/2 w-[500px] h-[500px] rounded-full border-[80px] border-[#AF703226] opacity-100 blur-2xl z-0" />
 
 
       {/* Hero Content */}
-      <div className="flex flex-row justify-between md:grid-cols-2 items-center gap-10 mt-22 px-2">
+      <div className="flex flex-row justify-between md:grid-cols-2 items-center gap-10 mt-20 px-2">
 
 
 
@@ -128,9 +128,9 @@ const Hero = () => {
         </div>
       </div>
 
-
+</div>
       {/* Autoscroll Text */}
-      <div className={ className + "movingtext  overflow-auto mt-16 flex flex-row "}>
+      <div className={ className + "movingtext pb-12 overflow-auto pt-12 flex flex-row "}>
         <div
           ref={scrollRef}
           className = " whitespace-nowrap flex flex-row gap-18  text-[#555] text-sm font-medium items-center"
@@ -149,7 +149,7 @@ const Hero = () => {
           ))}
         </div>
       </div>
-    </div>
+    
     
     </div>
   );

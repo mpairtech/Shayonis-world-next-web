@@ -6,7 +6,7 @@ import ClothingBrand from "@/components/ClothingBrand";
 import Construction from "@/components/Construction";
 import Manufacturing from "@/components/Manufacturing";
 import Footer from "@/components/Footer";
-
+import Agro from "@/components/Agro";
 
 
 export default function Home() {
@@ -18,9 +18,8 @@ export default function Home() {
    <ClothingBrand />
    <Construction />
    <Manufacturing />
-
+   <Agro />
    <Footer />
-
    
    </>
   );

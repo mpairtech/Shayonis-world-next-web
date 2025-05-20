@@ -3,18 +3,19 @@ import React  from 'react';
 import { useEffect, useState } from 'react';
 import { IoLocationSharp } from 'react-icons/io5';
 import Tag from './Tag';
-import AutoScroll from './AutoScroll';
 import AutoScrolling from './AutoScrolling';
+import { motion } from 'framer-motion';
 
 
 
 const categories = [
-  { label: 'Kids Outfit', src: '/image/clothing1.png' , objectPos: 'object-center'},
-  { label: 'Mans Wear', src: '/image/clothing2.png' , objectPos: 'object-left'},
-  { label: 'Female Wear', src: '/image/clothing3.png' , objectPos: 'object-left-top'},
-  { label: 'Saree', src: '/image/clothing4.png', objectPos: 'object-center' },
-  { label: 'Panjabi', src: '/image/clothing5.png' , objectPos: 'object-center'},
+  { label: 'Kids Outfit', frontImg: '/image/clothing1.png', backImg: '/image/clothing-backimg1.png', objectPos: 'object-center'},
+  { label: 'Mans Wear', frontImg: '/image/clothing2.png', backImg: '/image/clothing-backimg2.png', objectPos: 'object-left'},
+  { label: 'Female Wear', frontImg: '/image/clothing3.png', backImg: '/image/clothing-backimg3.png', objectPos: 'object-left-top'},
+  { label: 'Saree', frontImg: '/image/clothing4.png', backImg: '/image/clothing-backimg4.png', objectPos: 'object-center' },
+  { label: 'Panjabi', frontImg: '/image/clothing5.png', backImg: '/image/clothing-backimg5.png', objectPos: 'object-center'},
 ];
+
 
 
 const ClothingBrand = () => {
@@ -53,27 +54,49 @@ const ClothingBrand = () => {
 
       {/* Image Grid */}
       <div className="grid grid-cols-5 justify-start  max-w-screen ">
-        {categories.map((item, index) => {
-          const isShort = index === 1 || index === 3;
+    {categories.map((item, index) => {
+  const isShort = index === 1 || index === 3;
+  const [flipped, setFlipped] = useState(false);
 
-          return (
-            <div   key={index}  className="" >
-              <div  className={`overflow-hidden rounded-full w-55 ${ isShort ? 'h-72' : 'h-91' }`} >
-                <img
-                  src={item.src}
-                  alt={item.label}
-                  className={"w-full h-full object-cover ${objectPos}"} />
-              </div>
-              <div className="-mt-8">
-                <p className=" ml-38 text-sm font-medium bg-white rounded-full py-3 px-4 shadow-md inline-block" style={{color: "var(--tag-text)"}}>
-                {item.label}
-              </p> </div>
-            </div>
-          );
-        })}
+  return (
+    <div key={index} className="cursor-pointer" onClick={() => setFlipped(prev => !prev)}>
+     
+     
+      <div className={`relative overflow-hidden rounded-full w-55 ${isShort ? 'h-72' : 'h-91'} perspective`}>
+        <motion.div
+          className="w-full h-full transition-transform duration-500"
+          style={{ transformStyle: 'preserve-3d' }}
+          animate={{ rotateY: flipped ? 180 : 0 }}
+        >
+          {/* Front Image */}
+          <div className="absolute w-full h-full backface-hidden rounded-full overflow-hidden">
+            <img
+              src={item.frontImg}
+              alt="Front"
+              className={`w-full h-full object-cover ${item.objectPos}`}
+            />
+          </div>
+
+          {/* Back Image */}
+          <div className="absolute w-full h-full rotate-y-180 backface-hidden rounded-full overflow-hidden">
+            <img
+              src={item.backImg}
+              alt="Back"
+              className={`w-full h-full object-cover ${item.objectPos}`}
+            />
+          </div>
+        </motion.div>
       </div>
 
-     
+      <div className="-mt-8">
+        <p className="absolute ml-38 text-sm font-medium bg-white rounded-full  py-3 px-4 shadow-md inline-block z-10" style={{ color: "var(--tag-text)" }}>
+          {item.label}
+        </p>
+      </div>
+    </div>
+  );
+})}   
+</div>
 
     </section>
   );
