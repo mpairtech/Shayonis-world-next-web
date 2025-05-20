@@ -69,7 +69,7 @@ const carouselItems = [
 
 ];
 
-export default function Manufacturing() {
+export default function Apparel() {
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -90,7 +90,7 @@ export default function Manufacturing() {
 
 
    return (
-     <section className=" manufacturing relative px-18 max-w-screen mx-auto pb-10">
+     <section  id="apparel" className=" manufacturing relative px-18 max-w-screen mx-auto pb-10">
        <div className="text-blue-400 flex flex-row items- justify-end">
          <div className="absolute top-0 right-20 ">
            <StarIcon color="#F5F6FF" size={100} />

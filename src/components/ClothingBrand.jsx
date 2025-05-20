@@ -32,7 +32,7 @@ const ClothingBrand = () => {
 
 
   return (
-    <section className="mt-16 relative bg-[#FAF9F7] py-20 px-18 max-w-screen mx-auto">
+    <section  id="clothingbrand" className="mt-16 relative bg-[#FAF9F7] py-20 px-18 max-w-screen mx-auto">
       <div className="flex flex-row items-center justify-between ">
         
 

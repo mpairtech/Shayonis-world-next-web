@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import ClothingBrand from "@/components/ClothingBrand";
 import Construction from "@/components/Construction";
-import Manufacturing from "@/components/Manufacturing";
+import Apparel from "@/components/Apparel";
 import Footer from "@/components/Footer";
 import Agro from "@/components/Agro";
 
@@ -17,7 +17,7 @@ export default function Home() {
    <About />
    <ClothingBrand />
    <Construction />
-   <Manufacturing />
+   <Apparel />
    <Agro />
    <Footer />
    

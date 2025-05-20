@@ -36,7 +36,7 @@ const Agro = () => {
 
       
   return (
-    <section className="mt-12  px-6 md:px-12 lg:px-18 py-8 md:py-12 lg:my-16">
+    <section  id="agro" className="mt-12  px-6 md:px-12 lg:px-18 py-8 md:py-12 lg:my-16">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center text-center mb-8 md:mb-10 lg:mb-14  ">
         <Tag text="Agro Business" />

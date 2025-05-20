@@ -61,7 +61,7 @@ const Hero = () => {
 
   return (
 
-    <div className="hero-bg   overflow-hidden">
+    <div  id="home" className="hero-bg   overflow-hidden">
 
     <div className=" max-w-screen mx-auto  relative pt-12 px-12">
      

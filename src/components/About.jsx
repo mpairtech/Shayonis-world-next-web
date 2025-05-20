@@ -30,7 +30,7 @@ const About =() => {
   ];
 
   return (
-    <div className="mt-28 max-w-screen mx-auto px-18 flex flex-col items-center justify-center">
+    <div  id="about" className="mt-28 max-w-screen mx-auto px-18 flex flex-col items-center justify-center">
       <section>
         {" "}
         <div className=" flex flex-col items-center justify-center  w-fit h-fit mb-12 ">

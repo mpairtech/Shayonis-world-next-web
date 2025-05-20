@@ -6,7 +6,7 @@ import { useEffect, useRef } from 'react';
 
 const Construction = () => {
   return (
-    <section className="mt-12 px-18 py-16">
+    <section  id="construction" className="mt-12 px-18 py-16">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center text-center mb-14 ">
         <Tag text="Construction Business" />
