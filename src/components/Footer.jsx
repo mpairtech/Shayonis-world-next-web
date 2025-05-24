@@ -7,7 +7,22 @@ import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import { Playfair_Display } from 'next/font/google';
 
 
+const navItems = [
+  { label: "Clothing", id: "clothingbrand" },
+  { label: "Construction", id: "construction" },
+  { label: "Apparel", id: "apparel" },
+  { label: "Agro", id: "agro" },
+  { label: "About Us", id: "about" },
+];
 
+
+const scrollToSection = (e, id) => {
+  e.preventDefault();
+  const el = document.getElementById(id);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+};
 
 export const playfairDisplay = Playfair_Display({
   subsets: ['latin'],
@@ -47,12 +62,12 @@ export default function Footer() {
       <section className="mb-20">
         <div className="relative mission p-12 max-w-10/12 mx-auto text-white text-center font-semibold text-xl leading-relaxed">
           {/* Top-left star */}
-          <div className="absolute top-6 left-16">
+          <div className="absolute left-6 top-6 lg:left-16 md:left-12 sm:left-10">
             <StarIcon className="animate-flip-x" />
           </div>
 
           {/* Mission Text */}
-          <p className=" font-bold text-3xl py-4">
+          <p className=" sm:text-xl font-bold lg:text-3xl py-4">
             Our mission is to enrich everyday living through quality,
             innovation, and integrity— whether{" "}
             <em>you wear it, eat it, or live in it</em>. Join us as we continue
@@ -60,29 +75,33 @@ export default function Footer() {
           </p>
 
           {/* Bottom-right star */}
-          <div className="absolute bottom-10 right-46">
+          <div className="absolute bottom-10 lg:right-46 md:right-40 sm:right-16 right-6 ">
             <StarIcon className="animate-flip-x" />
           </div>
         </div>
       </section>
 
-      <section className="footer text-white w-full  pb-4">
-        <div className="w-full py-10 px-6 flex flex-row  items-start justify-between gap-1">
+
+{        /* Footer Section */}
+
+      <section className="footer text-white max-w-screen mx-auto ">
+        <div className="w-full lg:py-12 lg:px-12 flex flex-col lg:flex-row  items-start lg:justify-start lg:gap-4 sm:gap-4 lg:items-start px-6 py-10">
+
           {/* Left Column */}
-          <div className="pl-10">
-            <div className="flex flex-row justify-start items-center gap-2 ">
-              <div className={`text-3xl mb-2 ${playfairDisplay.className}`}>
+          <div className="w-full lg:w-5/12 flex flex-col items-start sm:mb-6">
+            <div className="flex flex-col sm:flex-col justify-start items-start sm:items-start gap-4 w-full">
+              <div className={`text-3xl mb-2 pl-3 ${playfairDisplay.className}`}>
                 <span className="text-white font-normal ">Shayonis</span> <br />
                 <span className="text-white font-extrabold  ">World</span>
               </div>
 
-              <p className="text-base pl-4">
-                From fashion to farming, fabric to foundations — <br />
-                Shayonis World unites diverse industries with a single <br />
+              <p className="text-base sm:w-4/6 lg:w-[100%] sm:pl-3 pl-3">
+                From fashion to farming, fabric to foundations —
+                Shayonis World unites diverse industries with a single 
                 promise: quality, innovation, and trust.
               </p>
             </div>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-4 pl-3">
               {[FaFacebookF, FaInstagram, FaYoutube, FaWhatsapp].map(
                 (Icon, index) => (
                   <div
@@ -97,26 +116,21 @@ export default function Footer() {
           </div>
 
           {/* Middle Column */}
-          <div className="grid grid-cols-3 gap-2 text-base font-semibold">
-            <a href="#hero" className="hover:underline">
-              About Us
-            </a>
-            <a href="#construction" className="hover:underline">
-              Construction
-            </a>
-            <a href="#agro" className="hover:underline">
-              Agro
-            </a>
-            <a href="#clothing" className="hover:underline">
-              Clothing
-            </a>
-            <a href="#apparel" className="hover:underline">
-              Apparel
-            </a>
-          </div>
+    <div className=" my-6 w-full lg:w-3/12 grid grid-cols-1 lg:grid-cols-3 gap-3 text-base font-semibold pl-3 lg:text-center">
+      {navItems.map(({ label, id }) => (
+        <a
+          key={id}
+          href={`#${id}`}
+          onClick={(e) => scrollToSection(e, id)}
+          className="hover:underline "
+        >
+          {label}
+        </a>
+      ))}
+    </div>
 
           {/* Right Column */}
-          <div className="space-y-3 text-sm pr-10">
+          <div className="w-full lg:w-4/12 space-y-3 text-base flex flex-col gap-3 pl-3">
             <div className="flex items-start">
               <MdLocationOn className="mt-1 mr-2" />
               <span>
@@ -143,7 +157,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-400 px-16 py-4 flex flex-row  justify-between  items-center">
+  <div className="border-t border-gray-400 px-6 lg:px-16 py-4 flex flex-col lg:flex-row justify-between items-center gap-2 text-center lg:text-left">
           <div className="flex items-center gap-2">
             <span>&copy;</span>
             <span className="text-xs font-medium">

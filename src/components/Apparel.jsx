@@ -90,28 +90,28 @@ export default function Apparel() {
 
 
    return (
-     <section  id="apparel" className=" manufacturing relative px-18 max-w-screen mx-auto pb-10">
+     <section  id="apparel" className=" manufacturing relative md:px-18 px-6 max-w-screen mx-auto pb-10">
        <div className="text-blue-400 flex flex-row items- justify-end">
-         <div className="absolute top-0 right-20 ">
-           <StarIcon color="#F5F6FF" size={100} />
+         <div className="absolute top-0 lg:right-20 sm:right-2">
+           <StarIcon color="#F5F6FF" size={100} className="w-[80%] md:w-[100%]" />
          </div>
-         <div className="absolute top-16 right-38">
-           <StarIcon color="#E6E9FF" size={60} />
+         <div className="absolute top-16 lg:right-38 sm:right-20">
+           <StarIcon color="#E6E9FF" size={60} className="w-[80%] md:w-[100%]"/>
          </div>
        </div>
 
        {/* Heading */}
-       <div className="text-start mb-4 ">
+       <div className="sm:text-center lg:text-start mb-12  ">
          <Tag text="Manufacturing Business" />
          <h2
-           className=" font-bold  text-[44px] mt-3"
+           className=" font-bold  lg:text-[44px] md:text-3xl sm:text-2xl mt-3"
            style={{ color: "var(--primary-text)" }}
          >
            {" "}
            Shayonis Apparel{" "}
          </h2>
          <p
-           className="font-bold text-[44px]"
+           className="font-bold lg:text-[44px] md:text-3xl sm:text-lg"
            style={{ color: "var(--secondary-text)" }}
          >
            {" "}
@@ -119,7 +119,7 @@ export default function Apparel() {
          </p>
        </div>
 
-       <div className="simple-carousel relative h-[400px]">
+       <div className="simple-carousel relative h-[400px]  ">
          {carouselItems.map((item, i) => (
            <div
              key={item.id}
@@ -132,14 +132,15 @@ export default function Apparel() {
                alt={item.title}
                width={800}
                height={400}
-               className="w-[800px] h-[400px] object-cover carousel-img"
+               className="w-[full] h-[full] object-cover carousel-img"
              />
              <div className="overlay">
-               <div className="carousel-info flex flex-row justify-between items-start gap-44 px-12">
-                 <span className="pt-16 w-7/12">
+
+               <div className="absolute flex flex-row justify-between  items-start sm:gap-2 lg:gap-48  lg:px-12 sm:px-4 overflow-hidden">
+                 <span className="text-base lg:text-2xl sm:text-base font-medium pt-10  sm:pt-16 sm:w-[100%] w-8/12 pl-4">
                    <p>{item.subtitle}</p>
                  </span>
-                 <span className="flex items-end pt-60 pl-16 w-3/12">
+                 <span className="flex items-end lg:pl-20 mt-62 lg:mt-66 w-5/12  lg:w-4/12 text-lg lg:text-2xl pr-4 font-bold  ">
                    <h3>{item.title}</h3>
                  </span>
                </div>
@@ -152,7 +153,7 @@ export default function Apparel() {
              <button
                key={i}
                onClick={() => setIndex(i)}
-               className={`w-3 h-3 rounded-full ${  index === i ? "bg-white" : "bg-white/50"   }`}
+               className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${  index === i ? "bg-white" : "bg-white/50"   }`}
              />
            ))}
          </div>

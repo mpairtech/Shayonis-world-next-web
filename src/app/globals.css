@@ -200,6 +200,7 @@ html {
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
+
 }
 
 .carousel-track-wrapper {
@@ -241,17 +242,6 @@ html {
   display: flex;
   color: white;
   border-radius: 20px;
-}
-
-.carousel-info h3 {
-  font-size: 24px;
-  font-weight: 700;
-  
-}
-
-.carousel-info p {
-  font-size: 24px;
-  font-weight: 400;
 }
 
 .carousel-fade-card {
@@ -312,7 +302,6 @@ background: linear-gradient(270deg, #979BAA 0%, #5F657B 100%);
 }
 
 .sidebar-btn {
-  background: #e8eff5;
   width: 465px;
   height: 80px;
   border: none;
@@ -330,7 +319,7 @@ background: linear-gradient(270deg, #979BAA 0%, #5F657B 100%);
 }
 
 .sidebar-btn.active {
-  background: #d4edfc;
+  background: #D3EDFF;
   font-weight: 600;
 
 }
@@ -347,5 +336,13 @@ background: linear-gradient(270deg, #979BAA 0%, #5F657B 100%);
 
 .rotate-y-180 {
   transform: rotateY(180deg);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
 
